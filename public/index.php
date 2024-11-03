@@ -21,7 +21,7 @@ $songs = Song::getSongs();
     <ul>
         <?php foreach ($songs as $song): ?>
             <li>
-                <a href="song.php?id=<?php echo $song['id']; ?>"><?php echo htmlspecialchars($song['title']); ?></a> - <?php echo htmlspecialchars($song['genre']); ?>
+                <a href="<?php echo '/musicsky/src/views/'; ?>song.php?id=<?php echo $song['id']; ?>"><?php echo htmlspecialchars($song['title']); ?></a> - <?php echo htmlspecialchars($song['genre']); ?>
             </li>
         <?php endforeach; ?>
     </ul>

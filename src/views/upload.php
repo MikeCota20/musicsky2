@@ -7,6 +7,7 @@
     <title>Subir Canción</title>
 </head>
 <body>
+    <?php include './navbar.php';?>
     <h2>Subir Canción</h2>
     <form action="../controllers/songs.php" method="POST" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Título de la canción" required>

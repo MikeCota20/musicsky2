@@ -6,8 +6,8 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['register'])) {
-        User::register($_POST['username'], $_POST['password']);
-        header('Location: ../views/login.php');
+        User::register($_POST['username'], $_POST['password'], $_POST['email']);
+        header('Location: /MusicSky/src/views/login.php');
     } elseif (isset($_POST['login'])) {
         $user = User::authenticate($_POST['username'], $_POST['password']);
         if ($user) {

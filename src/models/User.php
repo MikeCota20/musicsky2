@@ -3,11 +3,11 @@
 require_once '../../config.php';
 
 class User {
-    public static function register($username, $password) {
+    public static function register($username, $password, $email) {
         global $pdo;
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
-        return $stmt->execute(['username' => $username, 'password' => $hashedPassword]);
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)");
+        return $stmt->execute(['username' => $username, 'password' => $hashedPassword, 'email'=> $email]);
     }
 
     public static function authenticate($username, $password) {
