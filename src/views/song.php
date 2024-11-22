@@ -27,10 +27,13 @@ if ($songId) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/musicsky/public/css/styles.css">
     <title>Reproductor de Canción - <?php echo htmlspecialchars($song['title']); ?></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+    </style>
 </head>
-<body>
+<body class="main-content">
     <?php include './navbar.php';?>
     <h2><?php echo htmlspecialchars($song['title']); ?></h2>
     <p>Artista: <?php echo htmlspecialchars($song['genre']); ?></p>
@@ -62,6 +65,6 @@ if ($songId) {
         <p>No hay comentarios para esta canción.</p>
     <?php endif; ?>
 
-    <a href="../index.php">Volver al inicio</a>
+    <a href="/musicsky/public/index.php">Volver al inicio</a>
 </body>
 </html>

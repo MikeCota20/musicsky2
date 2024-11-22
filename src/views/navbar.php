@@ -23,14 +23,36 @@ session_start();
 
         /* Afecta el contenido principal para dejar espacio al navbar */
 
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+        .logo{
+            text-align: center;
+            font-family: "Bowlby One SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3dvh;
+            margin-bottom: 5dvh;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+        }
+
+        .logo:hover{
+            color: white;
+        }
+        .logo:active{
+            color: skyblue;
+        }
+
     </style>
+    
 </head>
 
 <body>
     <!-- Navbar como barra lateral fija -->
     <nav class="sidebar-nav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">MusicSky</a>
+            <a class="navbar-brand logo" href="/musicsky/public/index.php">MusicSky</a>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="<?php echo '/musicsky/public/index.php'; ?>">Home</a>

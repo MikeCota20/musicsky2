@@ -1,10 +1,12 @@
+
+
 ul{
     list-style-type: none;
 }
 
 .index-main{
     background-color: #eef2f3;
-
+    overflow-x: hidden;
 }
 
 .index-title{
@@ -31,17 +33,75 @@ ul{
     grid-template-rows: repeat(2, auto); /* Dos filas ajustadas a la altura de su contenido */
     gap: 1dvh; /* Espacio entre los elementos, ajustable */
     align-items: center;
-    margin-left: 6dvh;
+    margin-left: 2dvh;
+
+    margin-bottom: 0dvh;
 }
 
 .song-thumbnail {
     width: 20dvh;
     height: 20dvh;
     object-fit: cover;
-    margin-right: 10px;
     border-radius: 5px; /* Opcional para esquinas redondeadas */
+    transition: transform 1s ease;
 }
 
 .song-item{
-    margin-bottom: 8dvh;
+    margin-bottom: .5dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-item:hover .song-thumbnail {
+    transform: scale(1.2); /* Agrandar imagen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Agregar brillo/sombra */
+}
+
+.song-text{
+    transition: transform 1s ease-in-out; /* Agregar transición para el movimiento */
+    transform: translateY(0); /* Posición inicial */
+    text-align: center;
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5dvh;
+    margin-top: 1dvh;
+}
+
+.song-text a{
+    color: white;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+.song-item:hover .song-text {
+    transform: translateY(2dvh); /* Mover el texto hacia abajo */
+}
+
+.album{
+    font-weight: 400;
+    font-size: 2dvh;
+}
+
+.more{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 2dvh;
+    font-size: 5dvh;
+    text-decoration: none;
+    transform: scale(1.2); /* Agrandar imagen */
+    margin-right: 0;
+}
+
+.more i{
+    text-decoration: none;
+    color: black;
+    transition: transform .5s ease-in-out, box-shadow 2s ease-in-out;
+}
+
+.more:hover i {
+    transform: scale(1.5); /* Agrandar imagen */
+
 }
