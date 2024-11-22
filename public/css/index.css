@@ -1,48 +1,47 @@
-/* Estilos para el video de fondo */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    z-index: -1; /* Asegura que el video esté detrás del contenido */
-}
-
-#background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
-/* Estilos para el contenido encima del video */
-.content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    margin-top: 20%;
+ul{
+    list-style-type: none;
 }
 
 .index-main{
-
+    background-color: #eef2f3;
 
 }
 
 .index-title{
     text-align: center;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8dvh;
+    margin-bottom: 5dvh;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+.index-title2{
+
+    margin-bottom: 5dvh;
+
 }
 
 .index-recent-song-flex{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas, cada una ocupando un tercio del ancho */
+    grid-template-columns: repeat(5, 1fr); /* Tres columnas, cada una ocupando un tercio del ancho */
     grid-template-rows: repeat(2, auto); /* Dos filas ajustadas a la altura de su contenido */
-    gap: 10px; /* Espacio entre los elementos, ajustable */
+    gap: 1dvh; /* Espacio entre los elementos, ajustable */
     align-items: center;
+    margin-left: 6dvh;
+}
+
+.song-thumbnail {
+    width: 20dvh;
+    height: 20dvh;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px; /* Opcional para esquinas redondeadas */
+}
+
+.song-item{
+    margin-bottom: 8dvh;
 }
