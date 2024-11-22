@@ -3,16 +3,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/styles.css">
     <title>Iniciar Sesión</title>
 </head>
 <body>
-<?php include './navbar.php';?>
-    <h2>Iniciar Sesión</h2>
-    <form action="../controllers/auth.php" method="POST">
-        <input type="text" name="username" placeholder="Usuario" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit" name="login">Iniciar Sesión</button>
-    </form>
+    <?php include './navbar.php';?>
+
+    <main class="main-content">
+        <h2>Iniciar Sesión</h2>
+        <form action="../controllers/auth.php" method="POST">
+            <input type="text" name="username" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" name="login">Iniciar Sesión</button>
+        </form>
+    </main>
 </body>
 </html>
