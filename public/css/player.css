@@ -1,0 +1,59 @@
+.main-content{
+    background-color: #eef2f3;
+}
+
+.player{
+    background-color: white;
+    margin-top: 0dvh;
+    margin-left: 20dvh;
+    margin-right: 20dvh;
+    border: solid rgb(171, 171, 171) 1px;
+    padding: 3dvh;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.titulo{
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10dvh;
+}
+
+.gstuff{
+    display: flex;
+    gap: 5dvh;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-cont{
+    margin-top: 5dvh;
+    margin-bottom: 5dvh;
+}
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 1dvh;
+    margin-bottom: 3dvh;
+}
+
+.comment textarea{
+    border: none;
+    border-bottom: solid 3px rgb(83, 81, 81);
+}
+
+.comment button{
+    margin-top: 1dvh;
+    height: 6dvh;
+    width: 20dvh;
+    font-size: 2dvh;
+}
+
+.escrito{
+    margin-right: 10dvh;
+text-align: justify;
+}

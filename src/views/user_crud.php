@@ -59,10 +59,16 @@ $users = getUsers($pdo);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../..//public/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+    </style>
 </head>
 <body>
 <?php include './navbar.php';?>
 <div class="container">
+    <div class="main-content">
+
     <h1 class="mt-5">Gestión de Usuarios</h1>
 
     <form method="POST" class="mb-5">
@@ -108,6 +114,9 @@ $users = getUsers($pdo);
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    </div>
+    
 </div>
 
 <script>

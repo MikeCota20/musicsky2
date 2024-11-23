@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../public/css/styles.css">
     <title>Iniciar Sesión</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+    </style>
 </head>
 <body>
     <?php include './navbar.php';?>

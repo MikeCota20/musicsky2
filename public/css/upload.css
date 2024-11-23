@@ -1,0 +1,95 @@
+/* styles.css */
+body {
+    font-family: 'Bowlby One SC', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.main-content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #dfe4ea;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="file"]:focus {
+    border-color: #5f27cd;
+}
+
+form button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #5f27cd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #341f97;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.navbar {
+    background-color: #5f27cd;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.input-title{
+    text-align: left;
+    margin: 0;
+    margin-top: 1dvh;
+    font-weight: 600;
+    font-size: 2dvh;
+}

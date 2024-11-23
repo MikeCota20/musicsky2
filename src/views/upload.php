@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/musicsky/public/css/styles.css">
+    <link rel="stylesheet" href="/musicsky/public/css/upload.css">
     <title>Subir Canción</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
@@ -17,8 +18,10 @@
         <input type="text" name="title" placeholder="Título de la canción" required>
         <input type="text" name="genre" placeholder="Genero">
         <input type="text" name="album_id" placeholder="Álbum">
-        <input type="file" name="songFile" accept="audio/*" required>
-        <input type="file" name="thumbnail" accept="image/*" required>
+        <p class="input-title">Selecciona tu canción.</p>
+        <input type="file" name="songFile" accept="audio/*" required value="Selecciona tu canción.">
+        <p class="input-title">Selecciona tu miniatura.</p>
+        <input type="file" name="thumbnail" accept="image/*" required value="Selecciona tu miniatura.">
         <button type="submit">Subir Canción</button>
     </form>
 </main>
