@@ -18,9 +18,18 @@ class Song {
 
     public static function getSongsIndex() {
         global $pdo;
-        $stmt = $pdo->query("SELECT * FROM songs ORDER BY uploaded_at DESC LIMIT 5");
+        $stmt = $pdo->query("
+            SELECT 
+                songs.*, 
+                genres.genre AS genre_name 
+            FROM songs
+            LEFT JOIN genres ON songs.genre = genres.id
+            ORDER BY songs.uploaded_at DESC 
+            LIMIT 5
+        ");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    
 
     public static function getSongById($id) {
         global $pdo;
@@ -28,5 +37,6 @@ class Song {
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
 }
 ?>

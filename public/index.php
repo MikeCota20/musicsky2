@@ -1,6 +1,8 @@
 <?php
 require_once '../src/models/Song.php';
+require_once '../src/models/genres.php';
 $songs = Song::getSongsIndex();
+$genre = Genres::getGenre();
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +50,7 @@ $songs = Song::getSongsIndex();
                         <?php echo htmlspecialchars($song['title']); ?>
                     </a>
                     <div class="album">
-                    <?php echo htmlspecialchars($song['genre']); ?>
+                    <?php echo htmlspecialchars($song['genre_name']); ?>
                     </div>
                 </div>
 
@@ -61,6 +63,40 @@ $songs = Song::getSongsIndex();
         </a>
     </div>
 
+
+    <h2 class="index-title2">Géneros</h2>
+    <ul class="index-recent-song-flex">
+
+        <?php foreach ($songs as $song): ?>
+            <li class="song-item">
+                <!-- Mostrar la miniatura -->
+                <a href="<?php echo '/musicsky/src/views/'; ?>song.php?id=<?php echo $song['id']; ?>">
+                    <img 
+                        src="<?php echo htmlspecialchars('/musicsky/public/uploads/music-thumb/' . $song['thumbnail']); ?>" 
+                        alt="Thumbnail de <?php echo htmlspecialchars($song['title']); ?>" 
+                        class="song-thumbnail"
+                    >
+                </a>
+
+                <!-- Mostrar título y género -->
+                <div class="song-text">
+                    <a href="<?php echo '/musicsky/src/views/'; ?>song.php?id=<?php echo $song['id']; ?>">
+                        <?php echo htmlspecialchars($song['title']); ?>
+                    </a>
+                    <div class="album">
+                    <?php echo htmlspecialchars($song['genre']); ?>
+                    </div>
+                </div>
+
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="more">
+        <a href="/musicsky/src/views/upload.php">
+        <i class='fas fa-angle-down'></i>
+        </a>
+    </div>
+        
 
 
     <h2 class="index-title2">Albums Recientes</h2>
