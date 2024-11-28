@@ -69,7 +69,7 @@ session_start();
                 </li> -->
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?php echo '/musicsky/public/index.php'; ?>">Catalogo</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo '/musicsky/src/views/catalogo.php'; ?>">Catalogo</a>
                 </li>
                 
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['id'] != 8): ?>

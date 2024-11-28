@@ -57,3 +57,8 @@
     margin-right: 10dvh;
 text-align: justify;
 }
+
+.song-thumbnail{
+    width: 50dvh;
+    height: 50dvh;
+}

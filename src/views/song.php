@@ -4,6 +4,7 @@
 require_once '../models/Song.php';
 require_once '../models/Comment.php';
 
+
 // Obtener el ID de la canción desde la URL
 $songId = isset($_GET['id']) ? (int)$_GET['id'] : null;
 $song = null;
@@ -12,6 +13,7 @@ if ($songId) {
     // Obtener los detalles de la canción con el ID proporcionado
     $song = Song::getSongById($songId);
     $comments = Comment::getCommentsBySongId($songId);
+    
 
     if (!$song) {
         echo "<p>Canción no encontrada.</p>";
@@ -42,7 +44,7 @@ if ($songId) {
     <h2 class="titulo"><?php echo htmlspecialchars($song['title']); ?></h2>
     <div class="desc">
 
-        <p><span class="bold">Artista: </span><?php echo htmlspecialchars($song['genre']); ?></p>
+        <p><span class="bold">Genero: </span><?php echo htmlspecialchars($song['genre_name']); ?></p>
         <p><span class="bold">Álbum: </span><?php echo htmlspecialchars($song['album_id']); ?></p>
 
     </div>

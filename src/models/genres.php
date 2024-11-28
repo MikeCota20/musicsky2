@@ -15,5 +15,17 @@ class Genres {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function getGenres() {
+        global $pdo;
+        $stmt = $pdo->query("SELECT genre FROM genres");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function getGenreIndex() {
+        global $pdo;
+        $stmt = $pdo->query("SELECT * FROM genres LIMIT 5");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
 ?>

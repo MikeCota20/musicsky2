@@ -33,10 +33,20 @@ class Song {
 
     public static function getSongById($id) {
         global $pdo;
-        $stmt = $pdo->prepare("SELECT * FROM songs WHERE id = :id");
+        $stmt = $pdo->prepare("SELECT songs.*, 
+                               genres.genre AS genre_name
+                               FROM songs
+                               LEFT JOIN genres ON songs.genre = genres.id
+                               WHERE songs.id = :id");
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
+    
+    public static function getSongsCat() {
+        global $pdo;
+        $stmt = $pdo->query("SELECT * FROM songs ORDER BY id DESC");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
 }
 ?>

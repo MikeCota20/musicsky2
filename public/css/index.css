@@ -89,7 +89,7 @@ ul{
     display: grid;
     justify-content: center;
     margin-bottom: 2dvh;
-    font-size: 5dvh;
+    font-size: 4dvh;
     text-decoration: none;
     transform: scale(1.2); /* Agrandar imagen */
     margin-right: 0;
