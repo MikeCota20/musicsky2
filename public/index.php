@@ -71,7 +71,7 @@ $genres = Genres::getGenre();
         <?php foreach ($genres as $genre): ?>
             <li class="song-item">
                 <!-- Mostrar la miniatura -->
-                <a href="<?php echo '/musicsky/src/views/'; ?>genre.php?id=<?php echo $genre['id']; ?>">
+                <a href="<?php echo '/musicsky/src/views/catalogo.php'; ?>?genre=<?php echo $genre['id']; ?>&order=default">
                     <img 
                         src="<?php echo htmlspecialchars('/musicsky/public/uploads/genre/' . $genre['thumbnail']); ?>" 
                         alt="Thumbnail de <?php echo htmlspecialchars($genre['genre']); ?>" 
