@@ -1,4 +1,4 @@
-/* styles.css */
+/* General */
 body {
     font-family: 'Bowlby One SC', sans-serif;
     background-color: #f4f4f9;
@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Contenedor principal */
 .main-content {
     max-width: 600px;
     margin: 50px auto;
@@ -23,6 +24,7 @@ body {
     color: black;
 }
 
+/* Formularios */
 form {
     display: flex;
     flex-direction: column;
@@ -30,7 +32,9 @@ form {
 }
 
 form input[type="text"],
-form input[type="file"] {
+form input[type="file"],
+form input[type="email"],
+form input[type="password"] {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -41,10 +45,42 @@ form input[type="file"] {
 }
 
 form input[type="text"]:focus,
-form input[type="file"]:focus {
+form input[type="file"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
     border-color: #5f27cd;
 }
 
+/* Campo select */
+form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffffff;
+    border: 2px solid #dfe4ea;
+    border-radius: 5px;
+    outline: none;
+    appearance: none; /* Elimina la flecha predeterminada */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2210%22 height%3D%225%22 viewBox%3D%220 0 10 5%22%3E%3Cpath fill%3D%22%23333%22 d%3D%22M0 0l5 5 5-5H0z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+form select:focus {
+    border-color: #5f27cd;
+    box-shadow: 0 0 5px rgba(95, 39, 205, 0.5);
+}
+
+form select option {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Botón */
 form button {
     padding: 10px 15px;
     font-size: 1.2rem;
@@ -64,6 +100,7 @@ button[type="submit"]:active {
     transform: scale(0.98);
 }
 
+/* Barra de navegación */
 .navbar {
     background-color: #5f27cd;
     padding: 10px;
@@ -86,7 +123,8 @@ button[type="submit"]:active {
     text-decoration: underline;
 }
 
-.input-title{
+/* Títulos secundarios */
+.input-title {
     text-align: left;
     margin: 0;
     margin-top: 1dvh;
