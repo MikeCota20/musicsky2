@@ -1,0 +1,52 @@
+/* Estilos adicionales para la página de inicio de sesión */
+
+/* Input y botones */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #dfe4ea;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border-color: #5f27cd;
+}
+
+/* Botón */
+form button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #5f27cd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #341f97;
+}
+
+/* Encabezado */
+.main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Contenedor principal */
+.main-content {
+    max-width: 400px;
+    margin: 100px auto; /* Ajusta el margen superior para no cubrir el contenido con el navbar */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}

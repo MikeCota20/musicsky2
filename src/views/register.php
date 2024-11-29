@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/musicsky/public/css/styles.css">
+    <link rel="stylesheet" href="/musicsky/public/css/register.css">
     <title>Registro</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
