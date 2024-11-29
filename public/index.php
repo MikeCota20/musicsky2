@@ -59,7 +59,7 @@ $genres = Genres::getGenre();
         <?php endforeach; ?>
     </ul>
     <div class="more">
-        <a href="/musicsky/src/views/upload.php">
+        <a href="/musicsky/src/views/catalogo.php">
         <i class="fa-solid fa-circle-plus"></i>
         </a>
     </div>
@@ -90,7 +90,7 @@ $genres = Genres::getGenre();
         <?php endforeach; ?>
     </ul>
     <div class="more">
-        <a href="/musicsky/src/views/upload.php">
+        <a href="/musicsky/src/views/catalogo.php">
         <i class="fa-solid fa-circle-plus"></i>
         </a>
     </div>
