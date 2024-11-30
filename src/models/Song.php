@@ -1,6 +1,6 @@
 <?php
 // src/models/Song.php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/MusicSky/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/musicsky/config.php';
 
 
 class Song {

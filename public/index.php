@@ -24,7 +24,7 @@ $genres = Genres::getGenre();
 </head>
 <body>
     <?php
-        include '../src/views/navbar.php';
+        include '../../src/views/navbar.php';
     ?>
 
     
