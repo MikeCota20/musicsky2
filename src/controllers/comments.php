@@ -1,6 +1,5 @@
 <?php
 // src/controllers/comments.php
-session_start();
 require_once '../models/Comment.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

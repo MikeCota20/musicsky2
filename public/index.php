@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../src/models/Song.php';
 require_once '../src/models/genres.php';
 $songs = Song::getSongsIndex();
@@ -24,7 +25,7 @@ $genres = Genres::getGenre();
 </head>
 <body>
     <?php
-        include '../../src/views/navbar.php';
+        include '../src/views/navbar.php';
     ?>
 
     

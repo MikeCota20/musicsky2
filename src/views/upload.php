@@ -1,5 +1,10 @@
-<!-- src/views/upload.php -->
+<?php
+session_start();  // Mueve session_start() al inicio del archivo
+require_once '../models/genres.php';
+include './navbar.php';
 
+$genres = Genres::getGenre();
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,17 +13,8 @@
     <link rel="stylesheet" href="/musicsky/public/css/styles.css">
     <link rel="stylesheet" href="/musicsky/public/css/upload.css">
     <title>Subir Canción</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
-    </style>
 </head>
 <body>
-    <?php 
-    require_once '../models/genres.php';
-    include './navbar.php';
-    $genres = Genres::getGenre();
-
-    ?>
     <main class="main-content">    
     <h2>Subir Canción</h2>
     <form action="../controllers/songs.php" method="POST" enctype="multipart/form-data">
@@ -39,7 +35,6 @@
         <input type="file" name="thumbnail" accept="image/*" required value="Selecciona tu miniatura.">
         <button type="submit">Subir Canción</button>
     </form>
-</main>
-
+    </main>
 </body>
 </html>

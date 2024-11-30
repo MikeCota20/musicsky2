@@ -2,14 +2,11 @@
 // src/controllers/auth.php
 require_once '../models/User.php';
 
-// Iniciar sesión
-session_start();
-
 // Manejar solicitudes POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['register'])) {
         User::register($_POST['username'], $_POST['password'], $_POST['email']);
-        header('Location: /MusicSky/src/views/login.php');
+        header('Location: /musicsky/src/views/login.php');
         exit; // Asegúrate de detener la ejecución
     } elseif (isset($_POST['login'])) {
         $user = User::authenticate($_POST['username'], $_POST['password']);
