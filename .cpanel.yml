@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    -export DEPLOYPATH=/home2/avrgyoco/public_html/
+    -/bin/cp * $DEPLOYPATH
