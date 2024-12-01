@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($isSongUploaded && $isImageUploaded) {
         // Insertar la canción en la base de datos (sin usuario por ahora)
-        Song::addSong($_POST['title'], $_POST['genre'], $_POST['album_id'], $filePath, $thumb_name); // Asegúrate de que la base de datos soporte almacenar ambos campos
+        Song::addSong($_POST['title'], $_POST['genre'],  $filePath, $thumb_name,   $_POST['artista']); // Asegúrate de que la base de datos soporte almacenar ambos campos
         header('Location: ../../public/index.php');
         exit(); // Asegúrate de usar exit después de redirigir
     } else {

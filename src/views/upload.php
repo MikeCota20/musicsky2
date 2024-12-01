@@ -23,7 +23,7 @@
     <h2>Subir Canción</h2>
     <form action="../controllers/songs.php" method="POST" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Título de la canción" required>
-        <label for="genre">Género</label>
+        <input type="text" name="artista" placeholder="Artista" required>
             <select name="genre" id="genre" required>
                 <option value="" disabled selected>Selecciona un género</option>
                 <?php foreach ($genres as $genre): ?>
@@ -32,7 +32,6 @@
                     </option>
                 <?php endforeach; ?>
             </select>
-        <input type="text" name="album_id" placeholder="Álbum">
         <p class="input-title">Selecciona tu canción.</p>
         <input type="file" name="songFile" accept="audio/*" required value="Selecciona tu canción.">
         <p class="input-title">Selecciona tu miniatura.</p>

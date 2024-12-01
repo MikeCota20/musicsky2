@@ -45,7 +45,7 @@ if ($songId) {
     <div class="desc">
 
         <p><span class="bold">Genero: </span><?php echo htmlspecialchars($song['genre_name']); ?></p>
-        <p><span class="bold">Álbum: </span><?php echo htmlspecialchars($song['album_id']); ?></p>
+        <p><span class="bold">Arista: </span><?php echo htmlspecialchars($song['artista']); ?></p>
 
     </div>
 
@@ -91,7 +91,7 @@ if ($songId) {
 
     </div>
 
-    <a href="/musicsky/public/index.php">Volver al inicio</a>
+    <a href="./catalogo.php">Volver al catalogo</a>
 
     </div>
    

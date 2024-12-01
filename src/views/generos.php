@@ -45,7 +45,10 @@ if ($orderFilter === 'popular') {
         <div class="topbar">
             <a href="./catalogo.php" class="linktop">Canciones</a>
             <a href="./generos.php" class="linktop">Generos</a>
-            <a class="linktop">Albums</a>
+            <div class="search-container">
+                <label for="search">Buscar género:</label>
+                <input type="text" id="search" placeholder="Escribe para buscar...">
+            </div>
         </div>
 
         <div class="division">
@@ -84,8 +87,6 @@ if ($orderFilter === 'popular') {
             <!-- Formulario de filtro -->
             <div class="filter">
                 <form method="GET" action="" class="filtro">
-
-                    
                     <label for="order">Ordenar por:</label>
                     <select name="order" id="order">
                         <option value="default" <?php echo ($orderFilter == 'default') ? 'selected' : ''; ?>>Orden original</option>
@@ -97,8 +98,35 @@ if ($orderFilter === 'popular') {
                         <button type="submit">Aplicar filtro</button>
                     </div>
                 </form>
+
+
             </div>
+
         </div>
     </main>
+
+
+    <script>
+        // Capturamos el campo de búsqueda y los elementos de género
+        const searchInput = document.getElementById('search');
+        const genreItems = document.querySelectorAll('.song-item');
+
+        // Evento para buscar en tiempo real
+        searchInput.addEventListener('input', function() {
+            const query = searchInput.value.toLowerCase();
+
+            genreItems.forEach(item => {
+                const genreText = item.querySelector('.song-text a').textContent.toLowerCase();
+                
+                // Mostrar u ocultar el elemento según la coincidencia
+                if (genreText.includes(query)) {
+                    item.style.display = ''; // Mostrar
+                } else {
+                    item.style.display = 'none'; // Ocultar
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

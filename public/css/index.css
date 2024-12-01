@@ -15,7 +15,7 @@ ul{
     font-weight: 400;
     font-style: normal;
     font-size: 8dvh;
-    margin-bottom: 5dvh;
+    margin-bottom: 0dvh;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
@@ -88,7 +88,7 @@ ul{
 .more{
     display: grid;
     justify-content: center;
-    margin-bottom: 2dvh;
+    margin-bottom: 1dvh;
     font-size: 4dvh;
     text-decoration: none;
     transform: scale(1.2); /* Agrandar imagen */
@@ -105,3 +105,25 @@ ul{
     transform: scale(1.5); /* Agrandar imagen */
 
 }
+
+.more2{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 0dvh;
+    font-size: 4dvh;
+    text-decoration: none;
+    transform: scale(1.2); /* Agrandar imagen */
+    margin-right: 0;
+}
+
+.more2 i{
+    text-decoration: none;
+    color: black;
+    transition: transform .5s ease-in-out, box-shadow 2s ease-in-out;
+}
+
+.more2:hover i {
+    transform: scale(1.5); /* Agrandar imagen */
+
+}
+

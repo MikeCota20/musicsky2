@@ -4,10 +4,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/MusicSky/config.php';
 
 
 class Song {
-    public static function addSong($title, $genre, $album_id, $filePath, $thumbnail) {
+    public static function addSong($title, $genre, $filePath, $thumbnail, $artista) {
         global $pdo;
-        $stmt = $pdo->prepare("INSERT INTO songs (title, genre, album_id, file_path, thumbnail) VALUES (:title, :genre, :album_id, :file_path, :thumbnail)");
-        return $stmt->execute(['title' => $title, 'genre' => $genre, 'album_id' => $album_id, 'file_path' => $filePath, 'thumbnail' => $thumbnail]);
+        $stmt = $pdo->prepare("INSERT INTO songs (title, genre, file_path, thumbnail, artista) VALUES (:title, :genre, :file_path, :thumbnail, :artista)");
+        return $stmt->execute(['title' => $title, 'genre' => $genre, 'file_path' => $filePath, 'thumbnail' => $thumbnail, $artista => 'artista']);
     }
 
     public static function getSongs() {

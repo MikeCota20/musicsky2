@@ -149,3 +149,31 @@ html, body {
     font-weight: 100;
     font-size: small;
 }
+
+.search-container {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    gap: 0.5rem; /* Espacio entre el label y el input */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Mantener consistencia */
+    font-size: 1.8rem;
+}
+
+.search-container label {
+    color: #ffffff; /* Texto blanco */
+}
+
+#search {
+    padding: 0.5rem 1rem; /* Ajustar el relleno interno */
+    font-size: 1.6rem; /* Tamaño de fuente similar al resto */
+    color: #000; /* Texto negro */
+    border: 2px solid #ccc; /* Borde inicial */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transiciones suaves */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+#search:focus {
+    border-color: #1e90ff; /* Borde azul claro al enfocar */
+    outline: none; /* Quitar el contorno predeterminado */
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5); /* Sombra al enfocar */
+}
