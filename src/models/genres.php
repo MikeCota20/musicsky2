@@ -27,5 +27,20 @@ class Genres {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function countGenreUsage() {
+        global $pdo;
+        $stmt = $pdo->query("
+            SELECT g.id, g.genre, g.thumbnail, COUNT(s.genre) AS usage_count
+            FROM genres g
+            LEFT JOIN songs s ON g.id = s.genre
+            GROUP BY g.id, g.genre, g.thumbnail
+            ORDER BY usage_count DESC
+        ");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+
 }
+
+
 ?>

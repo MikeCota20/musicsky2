@@ -59,6 +59,13 @@ if (empty($songs) && $genreFilter) {
     <main class="main-content">
         <h1>Catálogo</h1>
 
+
+        <div class="topbar">
+            <a href="./catalogo.php" class="linktop">Canciones</a>
+            <a href="./generos.php" class="linktop">Generos</a>
+            <a class="linktop">Albums</a>
+        </div>
+
         <div class="division">
             <?php if (isset($noSongsMessage) && $noSongsMessage): ?>
                 <!-- Mostrar mensaje cuando no haya canciones para el género seleccionado -->

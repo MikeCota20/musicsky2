@@ -18,7 +18,7 @@ html, body {
     font-family: "Bowlby One SC", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-bottom: 5dvh;
+    margin-bottom: 3dvh;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -107,4 +107,45 @@ html, body {
     border-color: #003366; /* Borde azul más oscuro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil al presionar */
     transform: scale(0.98); /* Efecto de clic sutil */
+}
+
+.topbar {
+    display: flex;
+    justify-content: center; /* Centrar enlaces horizontalmente */
+    gap: 10rem; /* Espaciado entre enlaces */
+    background-color: #1e1e1e; /* Fondo oscuro profesional */
+    padding: 1rem 2rem; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    margin: 2dvh;
+}
+
+.linktop {
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Texto blanco */
+    font-size: 1.8rem; /* Tamaño de fuente ajustado */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fuente moderna */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border: 2px solid transparent; /* Borde inicial invisible */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+.linktop:hover {
+    color: #1e90ff; /* Cambiar a azul claro al pasar el cursor */
+    border-color: #1e90ff; /* Mostrar borde azul */
+    background-color: rgba(30, 144, 255, 0.1); /* Fondo semitransparente */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+}
+
+.linktop:active {
+    background-color: #1e90ff; /* Fondo sólido al hacer clic */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); /* Sombra interna */
+    transform: scale(0.98); /* Efecto de clic */
+}
+
+.c_can{
+    font-weight: 100;
+    font-size: small;
 }
