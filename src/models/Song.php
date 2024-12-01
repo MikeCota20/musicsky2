@@ -7,7 +7,7 @@ class Song {
     public static function addSong($title, $genre, $filePath, $thumbnail, $artista) {
         global $pdo;
         $stmt = $pdo->prepare("INSERT INTO songs (title, genre, file_path, thumbnail, artista) VALUES (:title, :genre, :file_path, :thumbnail, :artista)");
-        return $stmt->execute(['title' => $title, 'genre' => $genre, 'file_path' => $filePath, 'thumbnail' => $thumbnail, $artista => 'artista']);
+        return $stmt->execute(['title' => $title, 'genre' => $genre, 'file_path' => $filePath, 'thumbnail' => $thumbnail, 'artista' => $artista]);
     }
 
     public static function getSongs() {
