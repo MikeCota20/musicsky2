@@ -1,10 +1,10 @@
 
 <?php
 // config.php
-define('DB_HOST', '108.179.194.14');
-define('DB_NAME', 'avrgyoco_musicsky');
-define('DB_USER', 'avrgyoco_mike');
-define('DB_PASS', 'mimamixdZ1');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'musicsky');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 
 
